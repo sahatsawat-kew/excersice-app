@@ -2,7 +2,7 @@
 
 @section('content')
                <div class="container">
-                   <h1 class="text-white ">Excersice Apllication</h1>
+                   <h1 class="text-white ">Excersice Web</h1>
                     <div class="row">
                         <div class="col-4">                          
                             <div class="card">
