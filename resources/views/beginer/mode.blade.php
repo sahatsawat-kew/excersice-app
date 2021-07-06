@@ -39,6 +39,24 @@
     var count = 0;
     var c = 1 ;
 
+    if(random == 1){
+        document.getElementById("example").src = "/img/15 High Knee.gif";
+    }else if(random == 2){
+        document.getElementById("example").src = "/img/14 jumping jack.gif";
+    }else if(random == 3){
+        document.getElementById("example").src = "/img/13 Jump Squat.gif";
+    }else if(random == 4){
+        document.getElementById("example").src = "/img/10 mountain climber.gif";
+    }else if(random == 5){
+        document.getElementById("example").src = "/img/08 Push Up.gif";
+    }else if(random == 6){
+        document.getElementById("example").src = "/img/05 Lying leg raise.gif";
+    }else if(random == 7){
+        document.getElementById("example").src = "/img/09 lunge.gif";
+    }else if(random == 8){
+        document.getElementById("example").src = "/img/03 plank.gif";
+    }
+
     function startTimer() {
         var duration = 60 *  document.getElementById("insertTime").value ;
         var timer = duration, minutes, seconds;
@@ -109,23 +127,7 @@
 
         
 
-        if(random == 1){
-            document.getElementById("example").src = "/img/15 High Knee.gif";
-        }else if(random == 2){
-             document.getElementById("example").src = "/img/14 jumping jack.gif";
-        }else if(random == 3){
-            document.getElementById("example").src = "/img/13 Jump Squat.gif";
-        }else if(random == 4){
-            document.getElementById("example").src = "/img/10 mountain climber.gif";
-        }else if(random == 5){
-            document.getElementById("example").src = "/img/08 Push Up.gif";
-        }else if(random == 6){
-            document.getElementById("example").src = "/img/05 Lying leg raise.gif";
-        }else if(random == 7){
-            document.getElementById("example").src = "/img/09 lunge.gif";
-        }else if(random == 8){
-            document.getElementById("example").src = "/img/03 plank.gif";
-        }
+        
 
     }
 
