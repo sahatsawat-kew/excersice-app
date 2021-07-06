@@ -21,6 +21,9 @@
                                                 <br>
                                                 <button class="btn btn-success" style="float: center;" onclick="startTimer()">Start</button>
                                             </div>
+                                            <br>
+                                                {{-- <div class="text-black">Workout Time <span id="time2">00:00</span> seconds!</div> --}}
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -39,17 +42,31 @@
     function startTimer() {
         var duration = 60 *  document.getElementById("insertTime").value ;
         var timer = duration, minutes, seconds;
+        const button = document.querySelector('button');
+        button.disabled = true;
+        var disabled = document.getElementById("insertTime").disabled;
+        if (disabled) {
+            document.getElementById("insertTime").disabled = false;
+        }
+        else {
+            document.getElementById("insertTime").disabled = true;
+        }   
         
         
        
         setInterval(function () {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
-            
+            // s = count  < 10 ? "0" + count : count ;
+            // document.getElementById("time2").innerHTML = '00:' + s;
+
             if(count == workout){
+     
                 count = 0;
                 console.log("Go to resttttttttttttt")
                 document.getElementById("example").src = "/img/pause.png";
+
+               c++;
             }else if(count == rest){
                 if(c % 2 == 0){
                     count = 0;
