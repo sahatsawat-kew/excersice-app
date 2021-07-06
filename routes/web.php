@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ModePageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +22,5 @@ Route::get('/beginer', [UserController::class,'beginerModePage']);
 Route::get('/nomal', [UserController::class, 'nomalModePage']);
 Route::get('/sport', [UserController::class, 'sportModePage']);
 
-Route::get('/mode', [ModePageController::class, 'plyometric']);
 
 
