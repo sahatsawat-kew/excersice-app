@@ -41,9 +41,8 @@
     
     
 
-    async function startTimer() {
-        var duration = 60 *  document.getElementById("insertTime").value ;
-        var timer = duration, minutes, seconds;
+    function startTimer() {
+        
         const button = document.querySelector('button');
         button.disabled = true;
         var disabled = document.getElementById("insertTime").disabled;
@@ -54,8 +53,50 @@
             document.getElementById("insertTime").disabled = true;
         }
         
-        await displayGIF(random);
-        setInterval(function () {
+        displayGIF(random);
+        
+
+    }
+
+    
+    function getRandomItem(arr) {
+        
+        // get random index value
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        // get random item
+        const item = arr[randomIndex];
+        return item;
+    }    
+
+    function displayGIF(random){
+        setTimeout(function () {
+            if(random == 1){
+                document.getElementById("example").src = "/img/15 High Knee.gif";
+            }else if(random == 2){
+                document.getElementById("example").src = "/img/14 jumping jack.gif";
+            }else if(random == 3){
+                document.getElementById("example").src = "/img/01 lunge jump.gif";
+            }else if(random == 4){
+                document.getElementById("example").src = "/img/10 mountain climber.gif";
+            }else if(random == 5){
+                document.getElementById("example").src = "/img/07 push up burpee.gif";
+            }else if(random == 6){
+                document.getElementById("example").src = "/img/11 jump squat for touch.gif";
+            }else if(random == 7){
+                document.getElementById("example").src = "/img/02 star plank.gif";
+            }
+        console.log("Finish Await!!");
+        timeInsert();
+         },5000);
+    }
+    
+    
+
+    // startTimer(fiveMinutes, display);
+    function timeInsert(){
+        var duration = 60 *  document.getElementById("insertTime").value ;
+        var timer = duration, minutes, seconds;
+        setInterval(  function () {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
             s = count  < 10 ? "0" + count : count ;
@@ -106,47 +147,8 @@
             
         }, 1000);
 
-        
 
-        
-
-    }
-
-    
-    function getRandomItem(arr) {
-        
-        // get random index value
-        const randomIndex = Math.floor(Math.random() * arr.length);
-        // get random item
-        const item = arr[randomIndex];
-        return item;
     }    
-
-    function displayGIF(random){
-        setTimeout(function () {
-            if(random == 1){
-                document.getElementById("example").src = "/img/15 High Knee.gif";
-            }else if(random == 2){
-                document.getElementById("example").src = "/img/14 jumping jack.gif";
-            }else if(random == 3){
-                document.getElementById("example").src = "/img/01 lunge jump.gif";
-            }else if(random == 4){
-                document.getElementById("example").src = "/img/10 mountain climber.gif";
-            }else if(random == 5){
-                document.getElementById("example").src = "/img/07 push up burpee.gif";
-            }else if(random == 6){
-                document.getElementById("example").src = "/img/11 jump squat for touch.gif";
-            }else if(random == 7){
-                document.getElementById("example").src = "/img/02 star plank.gif";
-            }
-        console.log("Finish Await!!");
-         }, 10000);
-    }
-    
-    
-
-    // startTimer(fiveMinutes, display);
-         
         
 </script>
 
