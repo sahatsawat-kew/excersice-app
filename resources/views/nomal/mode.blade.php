@@ -2,7 +2,7 @@
 
 @section('content')
                <div class="container">
-                    <h1 class="text-white "><div class="text-white ">Nomal Timer <span id="time">00:00</span> minutes!</div></h1>
+                    <h1 class="text-white "><div class="text-white ">Normal Timer <span id="time">00:00</span> minutes!</div></h1>
                     <br>
                     
                     <div class="row">

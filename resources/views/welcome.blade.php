@@ -7,7 +7,7 @@
                         <div class="col-4">                          
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">คนที่ไม่เคยออกกำลังกาย</h5>
+                                    <h5 class="card-title">คนที่ไม่เคยออกกำลังกาย(Beginner)</h5>
                                     <p class="card-text">
                                     ออกกำลังกาย 15 วินาที พัก 45 วินาที
                                     </p>
@@ -18,7 +18,7 @@
                         <div class="col-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">คนปกติทั่วไป</h5>
+                                    <h5 class="card-title">คนปกติทั่วไป(Normal)</h5>
                                     <p class="card-text">
                                     ออกกำลังกาย 30 วินาที พัก 30 วินาที
                                     </p>
@@ -29,7 +29,7 @@
                         <div class="col-4">
                            <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">นักกีฬา</h5>
+                                    <h5 class="card-title">นักกีฬา(Sport)</h5>
                                     <p class="card-text">
                                     ออกกำลังกาย 45 วินาที พัก 20 วินาที
                                     </p>
