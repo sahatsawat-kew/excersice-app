@@ -2,7 +2,7 @@
 
 @section('content')
                <div class="container">
-                    <h1 class="text-white "><div class="text-white ">Timer <span id="time">00:00</span> minutes!</div></h1>
+                    <h1 class="text-white "><div class="text-white ">Beginer Timer <span id="time">00:00</span> minutes!</div></h1>
                     <br>
                     
                     <div class="row">
@@ -11,7 +11,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class=" col-8 text-center">
-                                            <img id="example" src="/img/ready.png"  height="500px"/>
+                                            <img id="example" src="/img/ready.png"  height="400px"/>
                                         </div>
                                         <div class=" col-1"></div>
                                         <div class = "col-3 vertical-center" >
@@ -23,7 +23,7 @@
                                                 
                                             </div>
                                             <br>
-                                                {{-- <div class="text-black">Workout Time <span id="time2">00:00</span> seconds!</div> --}}
+                                                <div class="text-black">Workout Time <span id="time2">00:00</span> seconds!</div>
                                         </div>
                                     </div>
                                 </div>
@@ -57,16 +57,16 @@
         setInterval(function () {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
-            // s = count  < 10 ? "0" + count : count ;
-            // document.getElementById("time2").innerHTML = '00:' + s;
+            s = count  < 10 ? "0" + count : count ;
+            document.getElementById("time2").innerHTML = '00:' + s;
 
-            if(count == workout){
+            if(count == workout && c % 2 != 0){
                     count = 0;
                     console.log("Go to resttttttttttttt")
                     document.getElementById("example").src = "/img/pause.png";
-
-            }else if(count == rest){
-                if(c % 2 == 0){
+                c++;
+            }else if(count == rest && c % 2 == 0){
+               
                     count = 0;
                     console.log("Come on boy!!!!!!")
                     random = getRandomItem(array);
@@ -88,7 +88,7 @@
                             document.getElementById("example").src = "/img/03 plank.gif";
                         }
                     
-                }
+    
                 c++;
             }
             // console.log(count);
