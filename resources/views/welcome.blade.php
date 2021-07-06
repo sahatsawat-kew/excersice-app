@@ -8,10 +8,9 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">คนที่ไม่เคยออกกำลังกาย</h5>
-                                    {{-- <p class="card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the
-                                    card's content.
-                                    </p> --}}
+                                    <p class="card-text">
+                                    ออกกำลังกาย 15 วินาที พัก 45 วินาที
+                                    </p>
                                     <a href="/beginer" class="btn btn-primary">Select</a>
                                 </div>
                             </div>
@@ -20,10 +19,9 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">คนปกติทั่วไป</h5>
-                                    {{-- <p class="card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the
-                                    card's content.
-                                    </p> --}}
+                                    <p class="card-text">
+                                    ออกกำลังกาย 30 วินาที พัก 30 วินาที
+                                    </p>
                                     <a href="/nomal" class="btn btn-primary">Select</a>
                                 </div>
                             </div>
@@ -32,10 +30,9 @@
                            <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">นักกีฬา</h5>
-                                    {{-- <p class="card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the
-                                    card's content.
-                                    </p> --}}
+                                    <p class="card-text">
+                                    ออกกำลังกาย 45 วินาที พัก 20 วินาที
+                                    </p>
                                     
                                     <a href="/sport" class="btn btn-primary" >Select</a>
                                 </div>
