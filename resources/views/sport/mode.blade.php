@@ -22,9 +22,7 @@
                                                 <button class="btn btn-success" style="float: center;" onclick="startTimer()">Start</button>
                                             </div>
                                             <br>
-                                            <div class="text-black row">
-                                                <p id="countdown">CountDown Time</p> <span id="time2" class="mx-1">00:00</span> seconds!
-                                            </div>
+                                            <div class="text-black">Workout Time <span id="time2">00:00</span> seconds!</div>
                                          
                                         </div>
                                     </div>
@@ -44,7 +42,8 @@
     
 
     function startTimer() {
-        
+        var duration = 60 *  document.getElementById("insertTime").value ;
+        var timer = duration, minutes, seconds;
         const button = document.querySelector('button');
         button.disabled = true;
         var disabled = document.getElementById("insertTime").disabled;
@@ -55,56 +54,22 @@
             document.getElementById("insertTime").disabled = true;
         }
         
-        displayGIF(random);
-        
-
-    }
-
-    
-    function getRandomItem(arr) {
-        
-        // get random index value
-        const randomIndex = Math.floor(Math.random() * arr.length);
-        // get random item
-        const item = arr[randomIndex];
-        return item;
-    }    
-
-    function displayGIF(random){
-        setTimeout(function () {
-            if(random == 1){
-                document.getElementById("example").src = "/img/15 High Knee.gif";
-            }else if(random == 2){
-                document.getElementById("example").src = "/img/14 jumping jack.gif";
-            }else if(random == 3){
-                document.getElementById("example").src = "/img/01 lunge jump.gif";
-            }else if(random == 4){
-                document.getElementById("example").src = "/img/10 mountain climber.gif";
-            }else if(random == 5){
-                document.getElementById("example").src = "/img/07 push up burpee.gif";
-            }else if(random == 6){
-                document.getElementById("example").src = "/img/11 jump squat for touch.gif";
-            }else if(random == 7){
-                document.getElementById("example").src = "/img/02 star plank.gif";
-            }
-            console.log("Finish Await!!");
-            timeInsert();
-         });
-    }
-    
-    function readyTime(){
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        
-        return display.textContent = minutes + ':' + seconds;
-    
-    }
-
-    // startTimer(fiveMinutes, display);
-    function timeInsert(){
-        var duration = 60 *  document.getElementById("insertTime").value ;
-        var timer = duration, minutes, seconds;
-        setInterval(  function () {
+        if(random == 1){
+            document.getElementById("example").src = "/img/15 High Knee.gif";
+        }else if(random == 2){
+            document.getElementById("example").src = "/img/14 jumping jack.gif";
+        }else if(random == 3){
+            document.getElementById("example").src = "/img/01 lunge jump.gif";
+        }else if(random == 4){
+            document.getElementById("example").src = "/img/10 mountain climber.gif";
+        }else if(random == 5){
+            document.getElementById("example").src = "/img/07 push up burpee.gif";
+        }else if(random == 6){
+            document.getElementById("example").src = "/img/11 jump squat for touch.gif";
+        }else if(random == 7){
+            document.getElementById("example").src = "/img/02 star plank.gif";
+        }
+        setInterval(function () {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
             s = count  < 10 ? "0" + count : count ;
@@ -114,7 +79,6 @@
                 count = 0;
                 console.log("Go to resttttttttttttt")
                 document.getElementById("example").src = "/img/pause.png";
-                 document.getElementById("countdown").innerHTML = "<p>CountDown Rest </p>";
                 c++;
             }else if(count == rest && c % 2 == 0){
                 
@@ -136,7 +100,6 @@
                         }else if(random == 7){
                             document.getElementById("example").src = "/img/02 star plank.gif";
                         }
-                        document.getElementById("countdown").innerHTML = "<p>CountDown Workout </p>";
                     
                 
                 c++;
@@ -157,8 +120,28 @@
             
         }, 1000);
 
+        
 
+        
+
+    }
+
+    
+    function getRandomItem(arr) {
+        
+        // get random index value
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        // get random item
+        const item = arr[randomIndex];
+        return item;
     }    
+
+    
+    
+    
+
+    // startTimer(fiveMinutes, display);
+         
         
 </script>
 
