@@ -123,22 +123,24 @@
     }    
 
     function displayGIF(random){
-        if(random == 1){
-            document.getElementById("example").src = "/img/15 High Knee.gif";
-        }else if(random == 2){
-            document.getElementById("example").src = "/img/14 jumping jack.gif";
-        }else if(random == 3){
-            document.getElementById("example").src = "/img/01 lunge jump.gif";
-        }else if(random == 4){
-            document.getElementById("example").src = "/img/10 mountain climber.gif";
-        }else if(random == 5){
-            document.getElementById("example").src = "/img/07 push up burpee.gif";
-        }else if(random == 6){
-            document.getElementById("example").src = "/img/11 jump squat for touch.gif";
-        }else if(random == 7){
-            document.getElementById("example").src = "/img/02 star plank.gif";
-        }
+        setTimeout(function () {
+            if(random == 1){
+                document.getElementById("example").src = "/img/15 High Knee.gif";
+            }else if(random == 2){
+                document.getElementById("example").src = "/img/14 jumping jack.gif";
+            }else if(random == 3){
+                document.getElementById("example").src = "/img/01 lunge jump.gif";
+            }else if(random == 4){
+                document.getElementById("example").src = "/img/10 mountain climber.gif";
+            }else if(random == 5){
+                document.getElementById("example").src = "/img/07 push up burpee.gif";
+            }else if(random == 6){
+                document.getElementById("example").src = "/img/11 jump squat for touch.gif";
+            }else if(random == 7){
+                document.getElementById("example").src = "/img/02 star plank.gif";
+            }
         console.log("Finish Await!!");
+         }, 10000);
     }
     
     
