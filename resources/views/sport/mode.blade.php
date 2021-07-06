@@ -22,7 +22,9 @@
                                                 <button class="btn btn-success" style="float: center;" onclick="startTimer()">Start</button>
                                             </div>
                                             <br>
-                                            <div class="text-black">Workout Time <span id="time2">00:00</span> seconds!</div>
+                                            <div class="text-black row">
+                                                <p id="countdown">CountDown Time</p> <span id="time2" class="mx-1">00:00</span> seconds!
+                                            </div>
                                          
                                         </div>
                                     </div>
@@ -85,12 +87,18 @@
             }else if(random == 7){
                 document.getElementById("example").src = "/img/02 star plank.gif";
             }
-        console.log("Finish Await!!");
-        timeInsert();
-         },5000);
+            console.log("Finish Await!!");
+            timeInsert();
+         });
     }
     
+    function readyTime(){
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        
+        return display.textContent = minutes + ':' + seconds;
     
+    }
 
     // startTimer(fiveMinutes, display);
     function timeInsert(){
@@ -106,6 +114,7 @@
                 count = 0;
                 console.log("Go to resttttttttttttt")
                 document.getElementById("example").src = "/img/pause.png";
+                 document.getElementById("countdown").innerHTML = "<p>CountDown Rest </p>";
                 c++;
             }else if(count == rest && c % 2 == 0){
                 
@@ -127,6 +136,7 @@
                         }else if(random == 7){
                             document.getElementById("example").src = "/img/02 star plank.gif";
                         }
+                        document.getElementById("countdown").innerHTML = "<p>CountDown Workout </p>";
                     
                 
                 c++;
